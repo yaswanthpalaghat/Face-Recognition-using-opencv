@@ -1,13 +1,4 @@
-''''
-Capture multiple Faces from multiple users to be stored on a DataBase (dataset directory)
-	==> Faces will be stored on a directory: dataset/ (if does not exist, pls create one)
-	==> Each face will have a unique numeric integer ID as 1, 2, 3, etc                       
 
-Based on original code by Anirban Kar: https://github.com/thecodacus/Face-Recognition    
-
-Developed by Marcelo Rovai - MJRoBot.org @ 21Feb18    
-
-'''
 
 import cv2
 import os
@@ -28,7 +19,7 @@ count = 0
 while(True):
 
     ret, img = cam.read()
-    img = cv2.flip(img, -1) # flip video image vertically
+    
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_detector.detectMultiScale(gray, 1.3, 5)
 
